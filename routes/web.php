@@ -6,6 +6,8 @@ use App\Http\Controllers\VerticalController;
 use App\Http\Controllers\HighestEducationValueController;
 use App\Http\Controllers\ProjectMemberController;
 use App\Http\Controllers\ProjectRoleController;
+use App\Http\Controllers\OpportunityStatusController;
+use App\Http\Controllers\OpportunityController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,3 +49,6 @@ Route::group(['prefix' => 'verticals'], function () {
 });
 
 Route::resource('highest-education-values', HighestEducationValueController::class);
+
+Route::resource('opportunity_status', OpportunityStatusController::class);
+Route::resource('opportunities', OpportunityController::class);
